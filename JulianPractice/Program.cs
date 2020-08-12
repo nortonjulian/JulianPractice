@@ -42,7 +42,7 @@ namespace JulianPractice
             //Add your new employees to the employee list in the company.
 
 
-            //Use a loop to print out every employee's full name that is in the company's list of employees.
+            //Use a loop to print out every employee's full name and age that is in the company's list of employees.
         }
 
         //DO NOT TOUCH THIS//

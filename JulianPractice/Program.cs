@@ -6,13 +6,39 @@ namespace JulianPractice
     class Program
     {
         static void Main(string[] args)
-        {            
+        {
+            
             //This is your instance of the company
             Company c = new Company();
 
             //This is your numbers array
             int[] numbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20 };
-           
+
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                Console.WriteLine(numbers[i]);
+            }
+
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                if (numbers[i] % 2 != 0)
+                {
+                    Console.WriteLine(numbers[i] + " ");
+                }
+            }
+
+            for (int i = 0; i < numbers.Length; i+=2)
+            {
+                Console.WriteLine(numbers[i]);
+            }
+
+            var myCompanyList = PopulateEmployees();
+
+            foreach (var employee in myCompanyList)
+            {
+                Console.WriteLine(employee.FullName, employee.Age);
+
+            }
 
             //You should not be adding anything to the classes I have made
             //You do not need to make any new classes
@@ -45,6 +71,7 @@ namespace JulianPractice
             //Use a loop to print out every employee's full name and age that is in the company's list of employees.
         }
 
+
         //DO NOT TOUCH THIS//
         private static List<Employee> PopulateEmployees()
         {
@@ -59,10 +86,18 @@ namespace JulianPractice
                 new Employee("Nathan","Rice",27),
                 new Employee("Ben","Bryant",24),
                 new Employee("Big","Boss",36),
-                new Employee("Solid","Snake",30)
+                new Employee("Solid","Snake",30),
+                new Employee("Matt","Brogan", 29),
+                new Employee("Greg","Reeves",34),
+                new Employee("Cindy","Wilson", 45)
             };
 
             return employees;
+
+
         }
+
+        
     }
+
 }

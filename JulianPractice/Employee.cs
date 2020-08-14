@@ -22,5 +22,10 @@ namespace JulianPractice
             LastName = lastName;
             Age = age;
         }
+
+       
+
+
+
     }
 }
